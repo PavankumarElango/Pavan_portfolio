@@ -7,11 +7,11 @@ Created on Sat Sep  5 15:57:56 2020
 
 from flask import Flask, render_template
 
-server = Flask(__name__)
-server.debug = True
-@server.route('/')
+app = Flask(__name__)
+app.debug = True
+@app.route('/')
 def landing_page():
     return render_template('index.html')
     
 if __name__ == '__main__':
-    server.run(debug=True)
+    app.run(debug=True)
